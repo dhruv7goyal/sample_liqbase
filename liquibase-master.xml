@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	
+	<!-- Load DDL -->	
+	<include file="ddl/create_airline.sql"/> 
+	<include file="ddl/create_country.sql"/>
+	<include file="ddl/create_cities.sql"/>
+
+	<!-- Load DML - Insert Data -->
+	<include file="dml/load_data/load_airlines.sql"/> 
+	<include file="dml/load_data/load_airlines_again.sql"/> 
+	<include file="dml/load_data/load_cities.sql"/>  
+	<include file="dml/load_data/load_country.sql"/>  
+	<include file="dml/load_data/load_country_more.sql"/>  
+
+</databaseChangeLog>
